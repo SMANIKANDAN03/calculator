@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="theme-toggle">
+        <label class="switch">
+            <input type="checkbox" id="theme-switch">
+            <span class="slider round"></span>
+        </label>
+    </div>
+    <div class="calculator">
+        <div class="display" id="display">0</div>
+        <div class="buttons">
+            <button class="button clear" onclick="clearDisplay()">C</button>
+            <button class="button delete" onclick="deleteLast()">DEL</button>
+            <button class="button operator" onclick="appendOperator('/')">÷</button>
+            <button class="button operator" onclick="appendOperator('*')">×</button>
+            <button class="button number" onclick="appendNumber(7)">7</button>
+            <button class="button number" onclick="appendNumber(8)">8</button>
+            <button class="button number" onclick="appendNumber(9)">9</button>
+            <button class="button operator" onclick="appendOperator('-')">−</button>
+            <button class="button number" onclick="appendNumber(4)">4</button>
+            <button class="button number" onclick="appendNumber(5)">5</button>
+            <button class="button number" onclick="appendNumber(6)">6</button>
+            <button class="button operator" onclick="appendOperator('+')">+</button>
+            <button class="button number" onclick="appendNumber(1)">1</button>
+            <button class="button number" onclick="appendNumber(2)">2</button>
+            <button class="button number" onclick="appendNumber(3)">3</button>
+            <button class="button equals" onclick="calculate()">=</button>
+            <button class="button number zero" onclick="appendNumber(0)">0</button>
+            <button class="button number" onclick="appendNumber('.')">.</button>
+
+            <!-- Scientific function buttons -->
+            <button class="button func" onclick="appendFunction('sqrt')">√</button>
+            <button class="button func" onclick="appendFunction('square')">x²</button>
+            <button class="button func" onclick="appendFunction('sin')">sin</button>
+            <button class="button func" onclick="appendFunction('cos')">cos</button>
+            <button class="button func" onclick="appendFunction('tan')">tan</button>
+            <button class="button func" onclick="appendFunction('log')">log</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
